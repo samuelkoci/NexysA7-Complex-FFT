@@ -2,7 +2,7 @@
 
 Turn your Nexys A7 into a real-time frequency analyzer. This project features a 16-bit Complex FFT processor designed in VHDL that transforms complex "corkscrew" time-domain signals into the frequency domain with hardware-level precision.
 
-![Timing Simulation](images/fft_timing_simulation_waveforms.png)
+![Timing Simulation](images/fft_timing_simulation_waveforms.jpg)
 
 ## 📋 Project Overview
 This implementation features a hardware-accelerated **8-Point Fast Fourier Transform (FFT)** engine on a Xilinx Artix-7 FPGA. Unlike software-based FFTs, this processor utilizes a dedicated data-path and a Finite State Machine (FSM) to achieve deterministic, low-latency frequency analysis.
@@ -17,12 +17,12 @@ The processor is built with a modular VHDL approach, ensuring efficient resource
 
 ### Core RTL Hierarchy
 The design is split into a dedicated control path (FSM) and a data path (Butterfly units and Memory).
-![Full RTL Hierarchy](images/fft_full_rtl_hierarchy.png)
+![Full RTL Hierarchy](images/fft_full_rtl_hierarchy.jpg)
 
 ### Control Logic (FSM) & Memory
 A robust **Finite State Machine** manages the multi-stage butterfly execution and dual-port memory addressing, ensuring synchronized data flow between stages.
-![FSM Logic](images/fft_control_fsm_logic.png)
-![Dual Port Memory Map](images/fft_dual_port_memory_map.png)
+![FSM Logic](images/fft_control_fsm_logic.jpg)
+![Dual Port Memory Map](images/fft_dual_port_memory_map.jpg)
 
 ## 🛠 Hardware Interfacing (Nexys A7)
 
